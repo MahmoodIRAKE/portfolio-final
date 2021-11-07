@@ -1,0 +1,666 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #288;
+    --main-heading-color: rgb(206, 206, 206);
+    --text-color: #fff;
+    --text-color-hacker: rgb(255, 255, 255, 0.9);
+    --hidden-prop: hidden;
+}
+
+.main-heading {
+    color: var(--main-heading-color);
+}
+
+.secondary-heading {
+    color: var(--main-heading-color);
+}
+
+
+/*****************************************************navbar*************************************************************/
+
+.menu-wrap {
+    visibility: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    opacity: 0.8;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    padding: 30px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    padding: 4px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: var(--text-color);
+    font-size: 18px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar .logo {
+    display: flex;
+    text-align: center;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/*hidding the menu to let the mobile menu visble*/
+
+@media(max-width:768px) {
+    .navbar {
+        visibility: hidden;
+    }
+    .menu-wrap {
+        visibility: visible;
+    }
+}
+
+
+/*media query for smaller screen not mobile or tablet control text and visblity*/
+
+@media(max-width:900px)and (min-width:800px) {
+    .navbar a {
+        color: var(--text-color);
+        padding: 4px;
+        font-size: 10px;
+    }
+    .navbar a:hover {
+        color: var(--text-color);
+        font-size: 14px;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+}
+
+@media(max-width:800px)and (min-width:768px) {
+    .navbar a {
+        color: var(--text-color);
+        padding: 4px;
+        font-size: 8px;
+    }
+    .navbar a:hover {
+        color: var(--text-color);
+        font-size: 14px;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+}
+
+
+/********************************** Animation For Header and header content*******************************/
+
+.header-content-mobile {
+    visibility: hidden;
+    height: 0vh;
+}
+
+.header-content-tablet {
+    visibility: hidden;
+    height: 0vh;
+}
+
+.header-content {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/laptop-screen.jpg") no-repeat center center/cover;
+}
+
+
+/*typing effect by html css*/
+
+
+/*this is for showing line by line animation */
+
+
+/*this is for typing ani8mation */
+
+.header-content .hacked h1 {
+    border-right: .15em solid orange;
+    color: var(--text-color-hacker);
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.header-content .hacked .hacker-line1 {
+    width: 7.3em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.header-content .hacked .hacker-line2 {
+    width: 11.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.header-content .hacked .hacker-line3 {
+    width: 7.3em;
+    opacity: 0;
+    -webkit-animation: type3 1s steps(40, end);
+    animation: type3 1s steps(40, end);
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.header-content .hacked .hacker-line4 {
+    width: 7.3em;
+    opacity: 0;
+    -webkit-animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.header-content .hacked {
+    animation: hide-code 1s ease-in-out;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        border: none;
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        width: 80%;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        width: 4%;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type3 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type4 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        width: 70%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type4 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: tranparent;
+    }
+}
+
+@keyframes hide-code {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+
+/*setting animation for computer size screen */
+
+.header-content .computer-size-screen {
+    border: 2px solid black;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50vh;
+    width: 42vw;
+    font-size: 10px;
+}
+
+
+/****hacking animation result ****/
+
+
+/*here i will make the logo appear in the middle of the screen then my name then my info*/
+
+.header-content .hacked-result {
+    color: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-delay: 2s;
+}
+
+.header-content .hacked-result .head {
+    opacity: 0;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: to-middle 2s forwards;
+    animation-delay: 8.5s;
+}
+
+.header-content.hacked-result .logo-hacked {
+    color: white;
+    animation: rotate-self 2s infinite;
+}
+
+.header-content .hacked-result .content-list {
+    opacity: 0;
+    list-style: decimal;
+    animation: to-middle2 2s forwards;
+    animation-delay: 9.5s;
+    font-size: 30px;
+}
+
+@keyframes rotate-self {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes to-middle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        font-size: 60px;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes to-middle2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+}
+
+
+/**about me page*/
+
+.about-me {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: ;
+}
+
+.about-me .img {
+    height: 100vh;
+    width: 40vw;
+    background: url("../images/about-me.jpg") no-repeat center center/cover;
+}
+
+.about-me .point1 {
+    height: 90vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5%;
+    margin-left: 10%;
+    align-items: center;
+    line-height: 2.5em;
+    font-size: 25px;
+}
+
+.about-me .point1 ul {
+    list-style: square;
+}
+
+@media(max-width:768px) {
+    .about-me {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background: e2e2e2ea;
+    }
+    .about-me .img {
+        display: none;
+        height: 0vh;
+    }
+    .about-me .point1 {
+        height: 30vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5%;
+        align-items: center;
+        line-height: 2.5em;
+        font-size: 25px;
+    }
+}
+
+
+/**education **/
+
+.education {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: e2e2e2ea;
+}
+
+.education .img {
+    height: 40vh;
+    width: 100vw;
+    background: url("../images/education.jpg") no-repeat center center/cover;
+}
+
+.education .point2 {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5em;
+    font-size: 20px;
+}
+
+.education .point2 ul {
+    list-style: square;
+}
+
+@media(max-width:768px) {
+    .education {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background: #fdfdfd;
+        border-top: 1px solid var(--secondary-color);
+    }
+    .education .img {
+        display: none;
+        height: 0vh;
+    }
+    .education .point2 {
+        height: 30vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5%;
+        margin-left: 5%;
+        align-items: center;
+        font-size: 20px;
+    }
+}
+
+
+/*experince*/
+
+.experince {
+    border-top: 1px var(--secondary-color) solid;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    background: #e2e2e2ea;
+}
+
+.experince .img {
+    height: 100vh;
+    width: 40vw;
+    background: url("../images/experince.jpg") no-repeat center center/cover;
+}
+
+.experince .point2 {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5em;
+    font-size: 20px;
+}
+
+.experince .point2 ul {
+    list-style: square;
+}
+
+@media(max-width:768px) {
+    .experince {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background: #fdfdfd;
+        border-top: 1px solid var(--secondary-color);
+    }
+    .experince .img {
+        display: none;
+        height: 0vh;
+    }
+    .experince .point2 {
+        height: 30vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5%;
+        margin-left: 5%;
+        align-items: center;
+        font-size: 20px;
+    }
+}
+
+.contact-me {
+    display: flex;
+    border-top: 1px solid var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    background: rgb(126, 126, 126);
+}
+
+.form-group {
+    margin-bottom: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+}
+
+textarea {
+    height: 200px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer
+}
+
+.btn:hover {
+    color: #333;
+    background: #f7c08a;
+}

@@ -1,0 +1,292 @@
+@media (max-width:768px)and (min-width:500px) {
+    .header-content {
+        visibility: hidden;
+        height: 0vh;
+    }
+    .header-content-mobile {
+        visibility: hidden;
+        height: 0vh;
+    }
+    .header-content-tablet {
+        visibility: visible;
+        background-color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../images/Tablet.jpeg") no-repeat center center/cover;
+    }
+    .header-content-tablet .hacked h1 {
+        border-right: .15em solid orange;
+        color: var(--text-color-hacker);
+        font-family: "Courier";
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .header-content-tablet .hacked .hacker-line1 {
+        width: 7.3em;
+        -webkit-animation: type 2s steps(40, end);
+        animation: type 2s steps(40, end);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-tablet .hacked .hacker-line2 {
+        width: 11.5em;
+        opacity: 0;
+        -webkit-animation: type2 2s steps(40, end);
+        animation: type2 2s steps(40, end);
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-tablet .hacked .hacker-line3 {
+        width: 7.3em;
+        opacity: 0;
+        -webkit-animation: type3 1s steps(40, end);
+        animation: type3 1s steps(40, end);
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-tablet .hacked .hacker-line4 {
+        width: 7.3em;
+        opacity: 0;
+        -webkit-animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+        animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+        -webkit-animation-delay: 6s;
+        animation-delay: 6s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-tablet .hacked {
+        animation: hide-code 1s ease-in-out;
+        animation-delay: 8s;
+        animation-fill-mode: forwards;
+    }
+    /*setting animation for computer size screen */
+    .header-content-tablet .computer-size-screen {
+        border: 2px solid black;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 41.5vh;
+        width: 72vw;
+        background-color: black;
+        font-size: 10px;
+    }
+    /****hacking animation result ****/
+    /*here i will make the logo appear in the middle of the screen then my name then my info*/
+    .header-content-tablet .hacked-result {
+        color: #855E42;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 2s;
+    }
+    .header-content-tablet .hacked-result .head {
+        opacity: 0;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: to-middle 2s forwards;
+        animation-delay: 8.5s;
+    }
+    .header-content-tablet .hacked-result .logo-hacked {
+        color: white;
+        animation: rotate-self 2s infinite;
+    }
+    .header-content-tablet .hacked-result .content-list {
+        opacity: 0;
+        list-style: decimal;
+        animation: to-middle2 2s forwards;
+        animation-delay: 9.5s;
+        font-size: 30px;
+    }
+    @keyframes rotate-self {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+    @keyframes to-middle {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            font-size: 60px;
+            transform: translateY(-100px);
+        }
+    }
+    @keyframes to-middle2 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-100px);
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .header-content {
+        visibility: hidden;
+        height: 0vh;
+    }
+    .header-content-tablet {
+        visibility: hidden;
+        height: 0vh;
+    }
+    .header-content-mobile {
+        visibility: visible;
+        background-color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../images/phone.jpg") no-repeat center center/cover;
+    }
+    .header-content-mobile .hacked h1 {
+        border-right: .15em solid orange;
+        color: var(--text-color-hacker);
+        font-family: "Courier";
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .header-content-mobile .hacked .hacker-line1 {
+        width: 7.3em;
+        -webkit-animation: type 2s steps(40, end);
+        animation: type 2s steps(40, end);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-mobile .hacked .hacker-line2 {
+        width: 11.5em;
+        opacity: 0;
+        -webkit-animation: type2 2s steps(40, end);
+        animation: type2 2s steps(40, end);
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-mobile .hacked .hacker-line3 {
+        width: 7.3em;
+        opacity: 0;
+        -webkit-animation: type3 1s steps(40, end);
+        animation: type3 1s steps(40, end);
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-mobile .hacked .hacker-line4 {
+        width: 7.3em;
+        opacity: 0;
+        -webkit-animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+        animation: type4 2s steps(40, end), blink .5s step-end infinite alternate;
+        -webkit-animation-delay: 6s;
+        animation-delay: 6s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .header-content-mobile .hacked {
+        animation: hide-code 1s ease-in-out;
+        animation-delay: 8s;
+        animation-fill-mode: forwards;
+        overflow-wrap: break-word;
+    }
+    /*setting animation for computer size screen */
+    .header-content-mobile .computer-size-screen {
+        border: 2px solid black;
+        margin-top: 28%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 38vh;
+        width: 32vw;
+        background-color: black;
+        font-size: 10px;
+        overflow-wrap: break-word;
+    }
+    /****hacking animation result ****/
+    /*here i will make the logo appear in the middle of the screen then my name then my info*/
+    .header-content-mobile .hacked-result {
+        color: #855E42;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 2s;
+    }
+    .header-content-mobile .hacked-result .head {
+        opacity: 0;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: to-middle 2s forwards;
+        animation-delay: 8.5s;
+    }
+    .header-content-mobile .hacked-result .logo-hacked {
+        color: white;
+        animation: rotate-self 2s infinite;
+    }
+    .header-content-mobile .hacked-result .content-list {
+        opacity: 0;
+        list-style: decimal;
+        animation: to-middle2 2s forwards;
+        animation-delay: 9.5s;
+        font-size: 10px;
+    }
+    @keyframes rotate-self {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+    @keyframes to-middle {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            font-size: 14px;
+            transform: translateY(-80px);
+        }
+    }
+    @keyframes to-middle2 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-80px);
+        }
+    }
+}
